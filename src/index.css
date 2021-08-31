@@ -1,13 +1,251 @@
-body {
+*  {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: 5px 5px #0000004b
+}
+
+p {
+  font-family: 'Mukta', sans-serif;
+  max-width: 1100px;
+}
+
+:root {
+  --primary-color: #d64242;
+  --black-color: rgb(24, 24, 24);
+  --primary-darker-color: #8f2d2d;
+  --secondary-color: #ffffffd2;
+  --complementary-color: #363636;
+  --type-color:rgb(230, 230, 230);
+  
+  --code-font: monospace;
+
+  --small-size:1rem;
+  --code-size: 1.25rem;
+  --regular-size:1.5rem;
+  --medium-size:2.5rem;
+  --large-s-size:5rem;
+  --large-size:10rem;
+}
+
+
+/* Color Settings */
+.color-primary {
+  color: var(--primary-color);
+}
+.color-black {
+  color: var(--black-color);
+}
+.color-primary-darker {
+  color: var(--primary-darker-color);
+}
+.color-secondary {
+  color: var(--secondary-color);
+}
+.color-complementary {
+  color: var(--complementary-color);
+}
+.color-contrast {
+  color: var(--type-color);
+}
+.color-text {
+  color: var(--type-color);
+}
+
+.bg-color-primary {
+  background-color: var(--primary-color);
+}
+.bg-color-black {
+  background-color: var(--black-color);
+}
+.bg-color-primary-darker {
+  background-color: var(--primary-darker-color);
+}
+.bg-color-secondary {
+  background-color: var(--secondary-color);
+}
+.bg-color-complementary {
+  background-color: var(--complementary-color);
+}
+.bg-color-contrast {
+  background-color: var(--type-color);
+}
+
+
+/* Text Settings */
+.text-small {
+  font-size: var(--small-size);
+}
+.text-s-medium {
+  font-size: var(--code-size);
+}
+.text-medium {
+  font-size: var(--medium-size);
+}
+.text-s-large {
+  font-size: var(--large-s-size);
+}
+.text-large {
+  font-size: var(--large-size);
+}
+
+.code {
+  font-family: var(--code-font);
+}
+.pencil {
+  font-family: 'Kalam', cursive;
+}
+.text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.wrap-off {
+  white-space: nowrap;
+}
+
+
+
+/* Cursor */
+.pointer {
+  cursor:pointer;
+}
+
+
+.picture {
+  margin: 1rem;
+  border: solid var(--complementary-color) 0.5rem;
+  border-radius: 25%;
+  box-shadow: 20px 25px 7.5px #20202057;
+  transition: 250ms;
+  height: 40vw;
+  max-height: 415px;
+}
+.picture:hover {
+  border-radius: 2%;
+  box-shadow: 10px 15px 20px #20202057;
+  height: 50vw;
+  max-height: 440px;
+}
+
+
+
+/* Position&Size  */
+.center-children {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-h {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.pos-corner {
+  position:absolute;
+  padding-bottom: 10rem;
+  padding-left: 10vw;
+}
+.tl {
+  position:absolute;
+  top:3%;
+  left: 5%
+}
+.tl-rel {
+  margin-left:25px;
+  margin-bottom: 10vw;
+  transition:250ms;
+}
+.absolute {
+  position: absolute;
+}
+.sticky {
+  position: sticky;
+}
+
+.vh {
+  min-height: 1341px;
+  height: 100vh;
+}
+.vh-adap {
+  min-height: 50rem;
+  height: 100vh;
+}
+
+.top {
+  top:0;
+}
+.left {
+  left:0;
+}
+
+.of-hide {
+  overflow: hidden;
+}
+
+.mail-text {
+  padding-top:5vh;
+  padding-bottom:5vh;
+  font-size: 5vw;
+  z-index: 4;
+  text-align:center;
+}
+
+.text-large-shrink {
+  font-size: 7rem;
+}
+
+.z-1 {
+  z-index: 1;
+}
+.z-2 {
+  z-index: 2;
+}
+.z-3 {
+  z-index: 3;
+}
+
+.noIbar {
+  cursor:default;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+.pb-2 {
+  padding-bottom: 3rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+.pl-1 {
+  padding-left: 1rem;
+}
+.pl-2 {
+  padding-left: 3rem;
+}
+.pr-1 {
+  padding-right: 1rem;
+}
+.pr-2 {
+  padding-right: 3rem;
+}
+
+@media screen and (max-width: 725px) {
+  :root {
+    --medium-size:2rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  :root {
+    --large-size:7rem;
+    --medium-size:1.30rem;
+  }
 }
